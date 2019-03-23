@@ -7,7 +7,6 @@
 
 Sub Stock_moderate()
 
-
 Dim ws As Worksheet
 
 For Each ws In Worksheets
@@ -17,7 +16,6 @@ Dim table_summary As Integer
 Dim opening_price As Double
 Dim closing_price As Double
 Dim Yearly_Change As Double
-Dim summary_last_row As Integer
 
 Ticker_Volume = 0
 table_summary = 2
@@ -37,6 +35,12 @@ For i = 2 To lastrow
     If ws.Cells(i + 1, 1) = ws.Cells(i, 1) Then
         Ticker_Volume = Ticker_Volume + ws.Cells(i, 7)
         'accumulate total volume
+        
+        'If opening price=0 then find the next non zero entry
+        If opening_price = 0 Then
+                opening_price = ws.Cells(i + 1, 3)
+        End If
+        
     Else
         'print out total volume and ticker name in summary table
         ws.Cells(table_summary, 9) = ws.Cells(i, 1)
@@ -71,20 +75,9 @@ For i = 2 To lastrow
             ws.Cells(table_summary, 11) = Format(ws.Cells(table_summary, 11), "Percent")
         End If
         
-        'save off the next tickers first non-zero opening price
-        '260 was chosen since there are 261 stock days in a year.
-        For j = i To (i + 260)
-            If ws.Cells(j + 1, 3) <> 0 Then
-                opening_price = ws.Cells(j + 1, 3)
-                Exit For
-        'If the ticket changes during this FOR loop then this Else if statement forces exit.
-        'This will happen if the ticker was not around for the whole year and opening price = 0.
-            ElseIf ws.Cells(j + 1, 1) <> ws.Cells(j + 2, 1) And ws.Cells(j + 1, 3) = 0 Then
-                opening_price = ws.Cells(j + 1, 3)
-                Exit For
-            End If
-        Next j
-            
+        'Set opening price to be the first occurance of each new ticket.
+        opening_price = ws.Cells(i + 1, 3)
+             
         'move the table summary down by one for thet next ticker
         table_summary = table_summary + 1
         
