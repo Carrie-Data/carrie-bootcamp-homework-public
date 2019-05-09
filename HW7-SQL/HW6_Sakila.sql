@@ -96,6 +96,7 @@ SELECT staff_id,
 FROM staff
 RIGHT JOIN payment
 USING (staff_id)
+WHERE payment_date like '2005-08%'
 GROUP BY staff_id;
 
 -- 6c. List each film and the number of actors who are listed for that film. 
