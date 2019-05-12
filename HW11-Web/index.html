@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bootstrap Components</title>
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+
+    <link rel="stylesheet"
+          href="styles.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand mb-0 h1"
+           href="index.html">Latitude</a>
+        <button class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarTogglerDemo01"
+                aria-controls="navbarTogglerDemo01"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse"
+             id="navbarTogglerDemo01">
+            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle"
+                       data-toggle="dropdown">
+                        Plots
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item"
+                           href="Visualizations_Temp.html">
+                            Max Temperature</a>
+                        <a class="dropdown-item"
+                           href="Visualizations_Humidity.html">
+                            Humidity</a>
+                        <a class="dropdown-item"
+                           href="Visualizations_Cloudiness.html">
+                            Cloudiness</a>
+                        <a class="dropdown-item"
+                           href="Visualizations_Wind.html">
+                            Wind Speed</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="Comparisons_page.html">
+                        Comparison</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="Data_page.html">
+                        Data</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <div class="container-fluid">
+        <div class='row'>
+            <div class="col-sm-12 col-md-7">
+                <div class="cell-container">
+                    <div class="card"
+                         id='outer_card'>
+                        <h2>Summary: Latitude vs X</h2>
+                        <div class="card-columns">
+                            <img class="card-img-top"
+                                 src="Resources/assets/images/Fig1.png"
+                                 alt="Card image cap"
+                                 title="Latitude vs Temperature">
+                            <p>An analyze was conducted to see how the
+                                change of latitude affects weather.
+                                This analysis was accomplished by pulling
+                                weather statistics for over 500 cities from
+                                OpenWeatherMap API.
+                                After gathering all the needed information and formatting it,
+                                Matplotlib was used plot various aspect of weather
+                                characteristics vs. latitude. Factors we looked at included:
+                            </p>
+                            <ul>
+                                <li>Temperature</li>
+                                <li>Cloudiness</li>
+                                <li>Wind Speed</li>
+                                <li>Humidity</li>
+                            </ul>
+                            <p>
+                                This site provides the formatted source data and visualization
+                                created for the analysis, as well as explanations and
+                                descriptions of any trends and correlation observed.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-md-5 side_card">
+                <div class="cell-container">
+                    <div class="card"
+                         id='outer_side_card'>
+                        <h2>Visualizations</h2>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-3 col-md-6">
+                                    <a href='Visualizations_Temp.html'>
+                                        <img class="card-img-top"
+                                             src="Resources/assets/images/Fig1.png"
+                                             alt="Latitude vs Temperature"
+                                             title="Latitude vs Temperature">
+                                    </a>
+                                </div>
+                                <div class="col-3  col-md-6">
+                                    <a href='Visualizations_Humidity.html'>
+                                        <img class="card-img-top"
+                                             src="Resources/assets/images/Fig2.png"
+                                             alt="Latitude vs Humidity"
+                                             title="Latitude vs Humidity">
+                                    </a>
+                                </div>
+                                <div class="col-3  col-md-6">
+                                    <a href='Visualizations_Cloudiness.html'>
+                                        <img class="card-img-top"
+                                             src="Resources/assets/images/Fig3.png"
+                                             alt="Latitude vs Cloudiness"
+                                             title="Latitude vs Cloudiness">
+                                    </a>
+                                </div>
+                                <div class="col-3 col-md-6">
+                                    <a href='Visualizations_Wind.html'>
+                                        <img class="card-img-top"
+                                             src="Resources/assets/images/Fig4.png"
+                                             alt="Latitude vs Wind Speed"
+                                             title="Latitude vs Wind Speed">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class='footer fixed-bottom me-auto py-3'>
+        <div class='container'>
+            <span class='text-muted'>Data Analysis Boot Camp 2019</span>
+        </div>
+    </footer>
+</body>
+
+</html>

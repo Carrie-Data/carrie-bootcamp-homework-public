@@ -1,0 +1,90 @@
+/* Add your styles here */
+
+.navbar-brand{
+    background-color: #0cb6be;
+    color: white!important;
+    padding-top: 0.5rem;
+    padding-bottom: .5rem;
+    padding-left: 0.5rem;
+    padding-right: .5rem;
+    margin-left: 2rem
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: black;
+}
+
+h2{
+   color:  #0cb6be;
+}
+
+h4{
+   color:  #0cb6be;
+}
+
+.row {
+    background-color: white;
+}
+
+.cell-container{
+  background-color: lightgray;
+}
+
+.col-md-7{
+    background-color: lightgray; 
+    padding-bottom: 5%;
+}
+
+.side_card{ 
+    background-color: lightgray;
+}
+
+.col-md-5{
+    background-color: lightgray; 
+    padding-top: 3%;
+}
+
+.card{
+  margin: 3% 3% 3% 3%;
+  padding: 1% 3% 3% 3%;
+  border-color: #0cb6be;
+}
+
+#Comparison-Card{
+  padding-top: 1%;
+  border-color: #0cb6be;
+  border-width: 1%;
+  margin-bottom: 3%;
+}
+
+.outer_card{
+  padding-top: 1%;
+  border-color: #0cb6be;
+  border-width: 1%;
+  margin-bottom: 10%;
+}
+
+body{
+  background-color: lightgrey;
+}
+
+.two-cards{
+  background-color: lightgrey;
+}
+
+.card-columns{
+  column-count: 2;
+}
+
+.table_card{
+  overflow: scroll;  
+}
+
+footer{
+    background-color: grey;
+    border-top: 10px solid #0cb6be;
+}
+
+.text-muted{
+  color: white!important;
+}
